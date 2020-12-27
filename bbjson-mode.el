@@ -51,7 +51,7 @@
   "Rules for indenting JSON files."
   (pcase (cons kind token)
     ;; base indent step
-    ('(:elem . basic) 2)
+    ('(:elem . basic) bbjson-indent-offset)
     ;; prevents the last line of the file from indenting
     ;; (or seems to, anyway.  who knows.  SMIE is a giant black box)
     ('(:elem . args) 0)))
